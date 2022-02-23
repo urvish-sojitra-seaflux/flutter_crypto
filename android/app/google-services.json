@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957691954688",
+    "project_id": "crypto-wallet-464f3",
+    "storage_bucket": "crypto-wallet-464f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957691954688:android:bfa2ef519d5a88238c7ae5",
+        "android_client_info": {
+          "package_name": "com.exanple.crypto_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957691954688-ufs3m2t56r4f89ra6j3pl1jva90mv6g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc6GmbFQ29V129XetvxKPcxc5KTiPic4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957691954688-ufs3m2t56r4f89ra6j3pl1jva90mv6g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

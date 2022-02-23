@@ -1,0 +1,72 @@
+name: flutter_boilerplate
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  intl: ^0.17.0 # For Date Conversion
+  provider: ^6.0.1 # Provider For State Management
+  dio: ^4.0.3 # For Network API Calling
+  shared_preferences: ^2.0.8 # To Stored Data in Local Storage
+  connectivity_plus: ^2.0.2 # To Check Network Connectivity
+  get_it: ^7.2.0 # For Accessing Service Objects
+  shimmer: ^2.0.0 # For Skeleton View
+  image_picker: ^0.8.4+4 # To Pick Image From Camera and Gallery
+  app_settings: ^4.1.1 # To Open App Settings
+  device_info_plus: ^3.1.1 # To Get Device Info
+  file_picker: ^4.2.2+1 # To Pick Media Files From Device
+  cached_network_image: ^3.1.0+1 # For Image Caching
+  json_annotation: ^4.3.0 # For Json Conversion
+  flutter_dotenv: ^5.0.2 # To Store variables in env file
+  rxdart: ^0.27.2
+  google_sign_in: ^5.2.4
+  flutter_custom_clippers: ^2.0.0
+  bip39: ^1.0.6
+  ed25519_hd_key: ^2.2.0
+  hex: ^0.2.0
+  http: ^0.13.4
+  web3dart: ^2.3.5
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+  json_serializable: ^6.0.1
+  build_runner: ^2.1.5
+
+flutter:
+  uses-material-design: true
+  assets:
+    # - assets/images/
+    # - assets/icons/
+    - .env.dev
+    - .env.stage
+    - .env.prod
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+          weight: 800
