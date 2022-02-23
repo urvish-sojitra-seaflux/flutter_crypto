@@ -4,6 +4,7 @@ import 'package:flutter_boilerplate/src/base/utils/constants/navigation_route_co
 import 'package:flutter_boilerplate/src/base/utils/localization/localization.dart';
 import 'package:flutter_boilerplate/src/base/utils/preference_utils.dart';
 import 'package:flutter_boilerplate/src/providers/theme_provier.dart';
+import 'package:flutter_boilerplate/src/widgets/metamask.dart';
 import 'package:flutter_boilerplate/src/widgets/themewidgets/theme_data.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => MetaMaskProvider()..init()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeData, child) => MaterialApp(
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
           darkTheme: darkThemeData(),
           navigatorKey: locator<NavigationUtils>().navigatorKey,
           onGenerateRoute: locator<NavigationUtils>().generateRoute,
-          initialRoute: routeLogin,
+          initialRoute: routeHome,
           localizationsDelegates: const [
             MyLocalizationsDelegate(),
             DefaultMaterialLocalizations.delegate,

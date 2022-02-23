@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/src/ui/auth/home/home_screen.dart';
-import 'package:flutter_boilerplate/src/ui/auth/login/login_screen.dart';
 
 import 'constants/navigation_route_constants.dart';
 
@@ -18,12 +17,6 @@ class NavigationUtils {
   Route<dynamic> generateRoute(RouteSettings settings) {
     Map<String, dynamic>? args = settings.arguments as Map<String, dynamic>?;
     switch (settings.name) {
-      case routeLogin:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) =>
-              const LoginScreen(), // To pass args use as const LoginScreen(id: args?["id"])
-        );
       case routeHome:
         return MaterialPageRoute(
           settings: settings,
