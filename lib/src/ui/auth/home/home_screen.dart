@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/src/base/extensions/context_extension.dart';
 import 'package:flutter_boilerplate/src/base/extensions/scaffold_extension.dart';
+import 'package:flutter_boilerplate/src/base/utils/constants/image_constant.dart';
 import 'package:flutter_boilerplate/src/widgets/metamask.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:provider/provider.dart';
@@ -42,7 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Consumer<MetaMaskProvider>(
                 builder: (context, provider, child) {
                   late final String text;
-
                   if (provider.isConnected && provider.isInOperatingChain) {
                     text = 'Connected';
                   } else if (provider.isConnected &&
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text('Click the button...'),
+                        const Text('Click the button to Connect Wallet'),
                         const SizedBox(height: 8),
                         ElevatedButton(
                           onPressed: () =>
@@ -62,13 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             primary: Colors.white,
                             padding: const EdgeInsets.all(0),
                           ),
-                          // color: Colors.white,
-                          // padding: const EdgeInsets.all(0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Image.network(
-                                'https://i0.wp.com/kindalame.com/wp-content/uploads/2021/05/metamask-fox-wordmark-horizontal.png?fit=1549%2C480&ssl=1',
+                                buttonImage,
                                 width: 300,
                               ),
                             ],
@@ -95,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Positioned.fill(
               child: IgnorePointer(
                 child: Image.network(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTicLAkhCzpJeu9OV-4GOO-BOon5aPGsj_wy9ETkR4g-BdAc8U2-TooYoiMcPcmcT48H7Y&usqp=CAU',
+                  elsebutton,
                   fit: BoxFit.cover,
                   opacity: const AlwaysStoppedAnimation(0.025),
                 ),
