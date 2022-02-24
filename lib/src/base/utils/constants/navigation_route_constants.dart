@@ -1,2 +1,2 @@
 // Auth Screen Routes
-const String routeHome = "routeHome";
+const String routeLogin = "routelogin";

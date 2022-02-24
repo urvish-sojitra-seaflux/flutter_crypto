@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
           darkTheme: darkThemeData(),
           navigatorKey: locator<NavigationUtils>().navigatorKey,
           onGenerateRoute: locator<NavigationUtils>().generateRoute,
-          initialRoute: routeHome,
+          initialRoute: routeLogin,
           localizationsDelegates: const [
             MyLocalizationsDelegate(),
             DefaultMaterialLocalizations.delegate,

@@ -8,14 +8,14 @@ import 'package:provider/provider.dart';
 
 import '../../../base/utils/constants/color_constant.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -43,10 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Consumer<MetaMaskProvider>(
                 builder: (context, provider, child) {
                   late final String text;
-                  if (provider.isConnected && provider.isInOperatingChain) {
+                  if (provider.isConnected) {
                     text = 'Connected';
-                  } else if (provider.isConnected &&
-                      !provider.isInOperatingChain) {
+                  } else if (provider.isConnected) {
                     text =
                         'Wrong chain. Please connect to ${MetaMaskProvider.operatingChain}';
                   } else if (provider.isEnabled) {
@@ -88,15 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
-              ),
-            ),
-            Positioned.fill(
-              child: IgnorePointer(
-                child: Image.network(
-                  elsebutton,
-                  fit: BoxFit.cover,
-                  opacity: const AlwaysStoppedAnimation(0.025),
-                ),
               ),
             ),
             ClipPath(
